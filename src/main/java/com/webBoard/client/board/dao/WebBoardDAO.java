@@ -1,5 +1,12 @@
 package com.webBoard.client.board.dao;
 
-public interface WebBoardDAO {
+import java.util.List;
 
+import org.apache.ibatis.annotations.Mapper;
+
+import com.webBoard.client.board.vo.WebBoardVO;
+
+@Mapper
+public interface WebBoardDAO {
+	public List<WebBoardVO> wbList(WebBoardVO wbVO);
 }

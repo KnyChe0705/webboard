@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.webBoard.client.board.dao.WebBoardDAO">
+	<resultMap type="webboard" id="webboardMap">
+		<id column="wb_no" property="wbNo" />
+		<result column="wb_name" property="wbName" />
+		<result column="wb_title" property="wbTitle" />
+		<result column="wb_content" property="wbContent" />
+		<result column="wb_pwd" property="wbPwd" />
+		<result column="wb_readcnt" property="wbReadcnt" />
+		<result column="wb_date" property="wbDate" />
+	</resultMap>
+	
+	
+	<select id="wbList" parameterType="webboard" resultMap="webboardMap">
+		SELECT wb_no, wb_name, wb_title, to_char(wb_date, 'YYYY-MM-DD') as wb_date, wb_readcnt
+		FROM web_board
+		ORDER BY wb_no desc
+	</select>
+</mapper>

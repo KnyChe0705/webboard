@@ -1,5 +1,9 @@
 package com.webBoard.client.board.service;
 
-public interface WebBoardService {
+import java.util.List;
 
+import com.webBoard.client.board.vo.WebBoardVO;
+
+public interface WebBoardService {
+	public List<WebBoardVO> wbList(WebBoardVO wbVO);
 }
