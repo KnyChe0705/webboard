@@ -17,4 +17,9 @@
 		FROM web_board
 		ORDER BY wb_no desc
 	</select>
+
+	<insert id="wbInsert" parameterType="webboard">
+		INSERT INTO web_board(wb_no, wb_name, wb_title, wb_content)
+		VALUES(seq_web_board.nextval, #{wbName}, #{wbTitle}, #{wbContent})
+	</insert>
 </mapper>

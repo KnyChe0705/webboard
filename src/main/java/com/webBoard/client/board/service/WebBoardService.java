@@ -6,4 +6,5 @@ import com.webBoard.client.board.vo.WebBoardVO;
 
 public interface WebBoardService {
 	public List<WebBoardVO> wbList(WebBoardVO wbVO);
+	public int wbInsert(WebBoardVO wbVO);
 }

@@ -27,4 +27,15 @@ public class WebBoardDAOTests {
 			log.info(vo.toString());
 		}
 	}*/
+	
+	@Test
+	public void testwbInsert() {
+		WebBoardVO webboard = new WebBoardVO();
+		webboard.setWbName("등록관리자");
+		webboard.setWbTitle("등록 테스트 진행중");
+		webboard.setWbContent("등록 테스트 진행중 입니다.");
+		
+		int count = wbDAO.wbInsert(webboard);
+		log.info("입력된 행의 수: " + count);
+	}
 }

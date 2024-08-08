@@ -49,7 +49,7 @@
 			</table>
 		</div>
 		<div class="text-end">
-			<button type="button" id="writeFormBtn">등록</button>
+			<button type="button" id="wbWriteFormBtn">등록</button>
 		</div>
 	</div>
 	<script src="/resources/include/js/wbList.js"></script>

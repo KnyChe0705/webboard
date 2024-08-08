@@ -9,4 +9,5 @@ import com.webBoard.client.board.vo.WebBoardVO;
 @Mapper
 public interface WebBoardDAO {
 	public List<WebBoardVO> wbList(WebBoardVO wbVO);
+	public int wbInsert(WebBoardVO wbVO);
 }
